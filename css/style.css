@@ -4,3 +4,39 @@
   --3: #5c5470;
   --4: #b7afcc;
 }
+body {
+  margin: 0;
+  background-color: var(--1);
+}
+
+.header {
+  display: block;
+  background-color: var(--2);
+  height: 10%;
+  width: 100%;
+  padding: 15px 10px;
+}
+.txtHeader {
+  display: block;
+  background-color: transparent;
+  font-size: 30px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.txtHeader:hover,
+.txtHeader:focus {
+  border: none;
+  background-color: var(--3);
+}
+
+.txtContent {
+  height: 50rem;
+  width: 100%;
+  background-color: var(--4);
+  border: none;
+  outline: none;
+  padding: 10px;
+}
