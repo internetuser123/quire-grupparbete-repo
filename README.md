@@ -19,7 +19,3 @@ Hej Majid! /Emelie
 
 
 Hej jag är en meny 
-
-hej hej hallå
-
-Hej Kalle /Joel
