@@ -1,18 +1,23 @@
+* {
+  padding: 0; 
+  margin: 0; 
+}
+
 :root {
   --1: #2a2438;
   --2: #383346;
   --3: #5c5470;
   --4: #b7afcc;
 }
+
 body {
-  margin: 0;
   background-color: var(--1);
 }
 
 .header {
   display: block;
   background-color: var(--2);
-  height: 10%;
+  height: 10vh;
   width: 100%;
   padding: 15px 10px;
 }
@@ -33,10 +38,49 @@ body {
 }
 
 .txtContent {
-  height: 50rem;
+  height: 80vh;
   width: 100%;
   background-color: var(--4);
   border: none;
   outline: none;
   padding: 10px;
+}
+
+.edit-icon {
+  position: relative;
+  top: -10rem; 
+  margin: 20px; 
+  float: right; 
+  background-color: var(--1);
+  border-radius: 50%;
+  width: 6rem; 
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s transform;
+}
+
+.edit-icon:hover {
+  transform: scale(1.2);
+}
+
+.edit-icon img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+footer p {
+  color: white; 
+}
+
+footer a {
+  color: var(--4); 
 }
