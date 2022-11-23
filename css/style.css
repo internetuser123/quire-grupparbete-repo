@@ -12,7 +12,73 @@
 
 body {
   background-color: var(--1);
+  /* height: 100%; */
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-content {
+  display: flex;
+}
+
+.note-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.quire-icon {
+  width: 30px;
+  height:30px;
+  margin: 1.5rem;
+  border-bottom: 1px;
+}
+
+a:hover {
+  background-color: rgb(87, 43, 87);
+  width: 100%;
+}
+
+.search-icon {
+  width: 25px;
+  height: 25px;
+  margin: 1.5rem;
+}
+
+.favorite-icon {
+  width: 23px;
+  height: 23px;
+  margin: 1.5rem;
+}
+
+.settings-icon {
+  width: 25px;
+  height: 25px;
+  margin: 1.5rem;
+}
+
+.navbar {
+  width: 10%;
+  height: 100%;
+  background-color: var(--4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
 
 .header {
   display: block;
@@ -40,7 +106,7 @@ body {
 .txtContent {
   height: 80vh;
   width: 100%;
-  background-color: var(--4);
+  background-color: white;
   border: none;
   outline: none;
   padding: 10px;
