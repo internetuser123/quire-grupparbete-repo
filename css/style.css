@@ -46,6 +46,30 @@ body {
   padding: 10px;
 }
 
+.edit-icon {
+  position: relative;
+  top: -10rem; 
+  margin: 20px; 
+  float: right; 
+  background-color: var(--1);
+  border-radius: 50%;
+  width: 6rem; 
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s transform;
+}
+
+.edit-icon:hover {
+  transform: scale(1.2);
+}
+
+.edit-icon img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
 footer {
   display: flex;
   justify-content: center;
