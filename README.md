@@ -6,5 +6,5 @@ An online notebook where you can add, edit and save your notes.
 - Joel Sellgren 
 - Majid Moradi 
 - Emelie Barrington
-- Karl Nordensson
+- Karl Nordenson
 - Josefine Kristiansson
