@@ -1,21 +1,10 @@
-Joel Sellgren
+# Quire - Notebook in the browser #
 
-Emelie was here
+An online notebook where you can add, edit and save your notes. 
 
-Joel was here again
-
-josie was here
-
-hEEEEJ
-
-this message was written in josieblabla branch
-Test från Emelie i Josieblabla
-
-Test merge
-
-majid
-
-Hej Majid! /Emelie
-
-
-Hej jag är en meny 
+## Team Koala: ##
+- Joel Sellgren 
+- Majid Moradi 
+- Emelie Barrington
+- Karl Nordensson
+- Josefine Kristiansson
