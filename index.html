@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Quire</title>
-    <link rel="icon" type="image/png" href="quireIcon.png" />
-  </head>
-  <body>
-    <div class="header">
-      <input
-        type="text"
-        class="txtHeader"
-        id="txtHeader"
-        placeholder="Enter title here"
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Automatic Popup</title>
+      <!--Google Fonts-->
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+        rel="stylesheet"
       />
-    </div>
-    <div class="content">
-      <textarea class="txtContent" id="txtContent"></textarea>
-    </div>
-    <script src="js/index.js"></script>
-  </body>
+      <!--Stylesheets-->
+      <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+      <div class="popup">
+        <button id="close">&times;</button>
+        <h2>Welcome to Notepad</h2>
+        <p>
+          In order to write someting you need to press the pen icon that is
+          located to the right bottom corner and when you finish do not forget
+          to click save!! At the left side of the website we have navigation bar
+          you can find eveyrhing from saved notepads to favorited notepads. Even
+          search your notes for quicker access.
+        </p>
+      </div>
+      <!--Script-->
+      <script src="onload.js"></script>
+    </body>
+  </html>
 </html>
