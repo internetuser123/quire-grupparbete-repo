@@ -150,3 +150,26 @@ footer p {
 footer a {
   color: var(--4); 
 }
+
+
+
+.textBox_upperToolbar
+{
+   padding: 10px;
+   border:solid 1px #ddd;
+   background:#f4f4f4;
+   border-radius:3px;
+}
+
+.textBox_upperToolbar > span
+{
+   cursor:pointer;
+}
+
+.inputBox
+{
+   padding: 20px;
+   min-height:400px;
+   border:solid 1px #ccc;
+   background-color: #C4DBE0;
+}
