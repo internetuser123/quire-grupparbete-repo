@@ -3,7 +3,7 @@
 
 // console.log(testing); 
 
-
+const modal = document.querySelector(".modal"); 
 let pageVisited = localStorage.getItem("modalShown"); 
 
 if (pageVisited) {
