@@ -12,12 +12,12 @@ editButton.addEventListener('click', edit);
 
 function edit() {
     document.getElementById("txtContent").removeAttribute("readonly");
-    console.log("Edit ran");
+    /* console.log("Edit ran"); */
 }
 
 function readonly () {
     document.getElementById("txtContent").setAttribute("readonly", "readonly");
-    console.log("RO ran")
+    /* console.log("RO ran") */
 }
 
 
