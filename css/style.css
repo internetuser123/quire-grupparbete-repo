@@ -110,6 +110,31 @@ a:hover {
   width: 100%;
 }
 
+.noteList {
+  background-color: var(--3);
+  margin-top: 126px;
+  width: 300px;
+  cursor: pointer;
+}
+
+.noteList:active {
+  background-color: white;
+}
+
+.noteListTitle {
+  font-size: 30px;
+  margin: 1%;
+}
+
+.noteListDescription {
+  margin: 5% 0% 5% 1%;
+}
+
+.noteListTime {
+  margin: 1%;
+  text-align: end;
+  font-style: italic;
+}
 
 
 .header {
