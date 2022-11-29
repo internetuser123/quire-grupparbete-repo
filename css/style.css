@@ -1,6 +1,6 @@
 * {
-  padding: 0; 
-  margin: 0; 
+  padding: 0;
+  margin: 0;
 }
 
 :root {
@@ -11,12 +11,12 @@
 }
 
 body {
-  background-color: var(--1);
+  background-color: var(--2);
   /* height: 100%; */
 }
 
 .modal {
-  background-color: var(--4); 
+  background-color: var(--4);
   width: 450px;
   padding: 30px 40px;
   position: absolute;
@@ -29,7 +29,7 @@ body {
   text-align: center;
 }
 
-.modal>button {
+.modal > button {
   display: block;
   margin: 0 0 20px auto;
   background-color: transparent;
@@ -40,7 +40,7 @@ body {
   cursor: pointer;
 }
 
-.modal>p {
+.modal > p {
   font-size: 14px;
   text-align: justify;
   margin: 20px 0;
@@ -66,7 +66,7 @@ body {
 
 .quire-icon {
   width: 30px;
-  height:30px;
+  height: 30px;
   margin: 1.5rem;
   border-bottom: 1px;
 }
@@ -110,7 +110,31 @@ a:hover {
   width: 100%;
 }
 
+.noteList {
+  background-color: var(--3);
+  margin-top: 126px;
+  width: 300px;
+  cursor: pointer;
+}
 
+.noteList:active {
+  background-color: white;
+}
+
+.noteListTitle {
+  font-size: 30px;
+  margin: 1%;
+}
+
+.noteListDescription {
+  margin: 5% 0% 5% 1%;
+}
+
+.noteListTime {
+  margin: 1%;
+  text-align: end;
+  font-style: italic;
+}
 
 .header {
   display: block;
@@ -146,12 +170,12 @@ a:hover {
 
 .edit-icon {
   position: relative;
-  top: -10rem; 
-  margin: 20px; 
-  float: right; 
+  top: -10rem;
+  margin: 20px;
+  float: right;
   background-color: var(--1);
   border-radius: 50%;
-  width: 6rem; 
+  width: 6rem;
   height: 6rem;
   display: flex;
   justify-content: center;
@@ -176,9 +200,9 @@ footer {
 }
 
 footer p {
-  color: white; 
+  color: white;
 }
 
 footer a {
-  color: var(--4); 
+  color: var(--4);
 }
