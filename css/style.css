@@ -78,7 +78,7 @@ body {
 }
 
 a:hover {
-  background-color: rgb(87, 43, 87);
+  background-color: var(--3);
   width: 100%;
 }
 
