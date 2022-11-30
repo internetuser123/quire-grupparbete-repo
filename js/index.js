@@ -68,16 +68,15 @@ function saveTitle() {
       function saveMessage() {
         if (typeof(Storage) != 'undefined') {
         //Get value of the message
-        const messageInput = document.getElementById('txtContent').value;
-        
+        const messageInput = document.getElementById('txtContent').innerHTML;
         //Save the value in local storage.
         localStorage.setItem('txtContent', messageInput);
-        document.getElementById('txtContent').value = localStorage.getItem('txtContent')
+        document.getElementById('txtContent').innerHTML = localStorage.getItem('txtContent')
         }
   
   }
   
   //Get the value of the message from local storage
-  document.getElementById('txtContent').value = localStorage.getItem('txtContent')
+  document.getElementById('txtContent').innerHTML = localStorage.getItem('txtContent')
 
         
