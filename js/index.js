@@ -62,6 +62,8 @@ function saveTitle() {
         }
     }
 
+    document.getElementById('txtHeader').value = localStorage.getItem('txtHeader')
+
       //Save note message
       function saveMessage() {
         if (typeof(Storage) != 'undefined') {
