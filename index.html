@@ -22,7 +22,7 @@
         </p>
       </div>
       <main class="main-content">
-          <nav class="navbar">
+          <nav class="navbar" id="navbar">
               <a href="#" class="navlinks"><img src="./images/quireIcon.png" alt="quire icon" class="quire-icon"></a>
               <a href="#" class="navlinks"><img src="./images/search-icon.png" alt="search icon" class="search-icon"></a>
               <a href="#" class="navlinks"><img src="./images/favorite-icon.png" alt="favorite icon" class="favorite-icon"></a>
@@ -42,20 +42,23 @@
             type="text" 
             class="txtHeader"
             id="txtHeader"
+            value=""
+            onchange="saveTitle()"
             placeholder="Enter title here"/>
         </header>
         <div class="fontNav">
           font styles here
            </div>
         <div class="content">
-          <textarea class="txtContent" id="txtContent"></textarea>
+
+          <textarea class="txtContent" id="txtContent" readonly="readonly" contenteditable='true' onchange="saveMessage()"></textarea>
         </div>
       </div>
       </main>
   </div>
 </div>
 
-<div class="edit-icon">
+<div class="edit-icon" id="edit-icon">
   <img src="./images/icons8-edit.svg" alt="Editing button">
 </div>
 
