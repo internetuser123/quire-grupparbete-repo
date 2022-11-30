@@ -6,19 +6,19 @@ editButton.addEventListener('click', edit);
 
 
 
- for (let i = 0; i < navlinks.length; i++) {
+/*   for (let i = 0; i < navlinks.length; i++) {
      navlinks[i].addEventListener("click", readonly);
- }
+ } */
 
 function edit() {
-    document.getElementById("txtContent").removeAttribute("readonly");
+    document.getElementById("txtContent").setAttribute("contenteditable", "true");
     /* console.log("Edit ran"); */
 }
 
-function readonly () {
+/* function readonly () {
     document.getElementById("txtContent").setAttribute("readonly", "readonly");
-    /* console.log("RO ran") */
-}
+    
+} */
 
 
 // localStorage.setItem("test", true, 0); 
@@ -73,10 +73,23 @@ function saveTitle() {
         localStorage.setItem('txtContent', messageInput);
         document.getElementById('txtContent').innerHTML = localStorage.getItem('txtContent')
         }
+        console.log("saveMessage ran")
   
   }
   
   //Get the value of the message from local storage
   document.getElementById('txtContent').innerHTML = localStorage.getItem('txtContent')
 
-        
+const placeholderButton = document.getElementById("placeholder-button");
+
+placeholderButton.addEventListener("click", saveMessage, saveTitle);
+
+/* const boldButton = document.getElementById("boldText")
+boldButton.addEventListener("click", bold)
+
+function bold(e) {
+  if (e.target.id === "boldText")
+  e.target.classList.toggle(".active")
+  console.log(e.target.id)
+
+} */
