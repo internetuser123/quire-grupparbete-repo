@@ -82,7 +82,10 @@ function saveTitle() {
 
 const placeholderButton = document.getElementById("placeholder-button");
 
-placeholderButton.addEventListener("click", saveMessage, saveTitle);
+placeholderButton.addEventListener("click", () => {    
+    saveMessage();
+    saveTitle();    
+});
 
 /* const boldButton = document.getElementById("boldText")
 boldButton.addEventListener("click", bold)
