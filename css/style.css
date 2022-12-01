@@ -136,6 +136,15 @@ a:hover {
   font-style: italic;
 }
 
+.toolbar {
+  width: 100%; 
+  height: 100px;
+}
+
+.toolbar>button {
+  padding: 0.8rem; 
+  margin: 0.5rem; 
+}
 
 .header {
   display: block;

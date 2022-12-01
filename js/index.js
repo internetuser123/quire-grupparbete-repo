@@ -87,12 +87,12 @@ placeholderButton.addEventListener("click", () => {
     saveTitle();    
 });
 
-/* const boldButton = document.getElementById("boldText")
-boldButton.addEventListener("click", bold)
+const buttons = document.querySelectorAll(".btn"); 
 
-function bold(e) {
-  if (e.target.id === "boldText")
-  e.target.classList.toggle(".active")
-  console.log(e.target.id)
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        let command = button.dataset["element"];
+        document.execCommand(command, false, null); 
+    }); 
+}); 
 
-} */
