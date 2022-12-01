@@ -71,8 +71,8 @@ body {
 }
 
 .quire-icon {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   margin: 1.5rem;
   border-bottom: 1px;
 }
@@ -82,21 +82,27 @@ a:hover {
   width: 100%;
 }
 
+.folder-icon {
+  width: 50px;
+  height: 40px;
+  margin: 1.5rem;
+}
+
 .search-icon {
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   margin: 1.5rem;
 }
 
 .favorite-icon {
-  width: 23px;
-  height: 23px;
+  width: 50px;
+  height: 50px;
   margin: 1.5rem;
 }
 
 .settings-icon {
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   margin: 1.5rem;
 }
 
@@ -202,8 +208,7 @@ a:hover {
 footer {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 10vh;
+  height: 5vh;
 }
 
 footer p {
