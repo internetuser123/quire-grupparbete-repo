@@ -1,6 +1,9 @@
 let noteArea = document.getElementById("txtContent");
 let editButton = document.getElementById("edit-icon");
 let navlinks = document.querySelectorAll(".navlinks");
+const noteList = document.querySelector(".noteList");
+const addNoteButton = noteList.querySelector(".add-note");
+
 
 editButton.addEventListener('click', edit);
 
@@ -87,6 +90,7 @@ placeholderButton.addEventListener("click", () => {
     saveTitle();    
 });
 
+
 const buttons = document.querySelectorAll(".btn"); 
 
 buttons.forEach(button => {
@@ -95,4 +99,49 @@ buttons.forEach(button => {
         document.execCommand(command, false, null); 
     }); 
 }); 
+
+
+
+
+
+
+
+getNotes().forEach((note) => {
+    const noteElement = createNoteElement(note.id, note.content);
+    notesContainer.insertBefore(noteElement, addNoteButton);
+  });
+
+  addNoteButton.addEventListener("click", () => addNote());
+
+  function getNotes() {
+    return JSON.parse(localStorage.getItem("stickynotes-notes") || "[]");
+  }
+
+  function createNoteElement(id, content) {
+    const element = document.createElement("div");
+    element.setAttribute("contenteditable", "true");
+  
+    element.classList.add("note");
+    element.value = content;
+    element.placeholder = "Empty Sticky Note";
+  
+    element.addEventListener("change", () => {
+      updateNote(id, element.value);
+
+
+    })
+
+    return element;
+
+};
+
+function addNote() {
+    const notes = getNotes();
+    const noteObject = {
+      id: Math.floor(Math.random() * 100000),
+      content: ""
+      
+    }
+    console.log("addnote ran")
+};
 
