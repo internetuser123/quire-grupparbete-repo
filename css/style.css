@@ -112,12 +112,19 @@ a:hover {
 
 .noteList {
   background-color: var(--3);
-  padding: 10px;
+  padding: 10px 0 10px 10px;
   width: 300px;
   cursor: pointer;
 }
 
-.noteList:active {
+.noteListItem {
+  border-left: 3px solid white; 
+  padding: 3px; 
+  margin-bottom: 1rem; 
+  background-color: #9188a6;
+}
+
+.noteListItem:active {
   background-color: white;
 }
 

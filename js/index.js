@@ -60,9 +60,41 @@ function saveMessage() {
 //Get the value of the message from local storage
 document.getElementById('txtContent').innerHTML = localStorage.getItem('txtContent')
 
-const placeholderButton = document.getElementById("placeholder-button");
-placeholderButton.addEventListener("click", () => {    
+//Spara anteckning
+const saveBtn = document.getElementById("placeholder-button"); 
+saveBtn.addEventListener("click", saveMessage);
+
+const newNoteBtn = document.getElementById("new-note-btn");
+newNoteBtn.addEventListener("click", () => {
     //Skapa ny anteckning och spara den gamla till menyn på sidan 
+    //Give each note a unique identifier - the title? 
+
+    //Make sure that the user saved their note first 
+    saveMessage(); 
+    const noteTitle = localStorage.getItem("txtHeader");
+    const noteContent = localStorage.getItem("txtContent");  
+    const noteList = document.querySelector(".noteList"); 
+   
+    const savedNote = document.createElement("div"); 
+    savedNote.classList.add("noteListItem"); 
+
+    const savedNoteTitle = document.createElement("div"); 
+    savedNoteTitle.classList.add("noteListTitle"); 
+    savedNoteTitle.innerHTML = noteTitle; 
+
+    const savedNoteContent = document.createElement("div"); 
+    savedNoteContent.classList.add("noteListDescription"); 
+    savedNoteContent.innerHTML = noteContent; 
+
+    savedNote.appendChild(savedNoteTitle); 
+    savedNote.appendChild(savedNoteContent); 
+    //Later on could add saving the date here
+
+    noteList.appendChild(savedNote); 
+
+    //TODO: Save to local storage
+    //TODO: Empty txtTitle and txtContent to use for new note
+
 });
 
 const buttons = document.querySelectorAll(".btn"); 
