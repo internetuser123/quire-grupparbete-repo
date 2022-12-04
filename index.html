@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Quire</title>
-    <link rel="icon" type="image/png" href="./images/quireIcon.png" />
+    <link rel="icon" type="image/png" href="./images/quireIcon.png">
   </head>
   <body>
     <div class="container">
+      <!--Modal popup that only appears the first time user visits the page-->
       <div class="modal"> 
         <button id="close-btn">&times;</button>
         <h2>Welcome to Notepad</h2>
@@ -21,65 +22,68 @@
             search your notes for quicker access.
         </p>
       </div>
+
       <main class="main-content">
-          <nav class="navbar" id="navbar">
-              <a href="#" class="navlinks"><img src="./images/quireIcon.png" alt="quire icon" class="quire-icon"></a>
-              <a href="#" class="navlinks"><img src="./images/search-icon.png" alt="search icon" class="search-icon"></a>
-              <a href="#" class="navlinks"><img src="./images/favorite-icon.png" alt="favorite icon" class="favorite-icon"></a>
-              <a href="#" class="navlinks"><img src="./images/settings-icon.png" alt="settings icon" class="settings-icon"></a>
-          </nav>
-          <div class="noteList">
-            <div class="noteListItem">
-              <div class="noteListTitle">My first note</div>
-              <div class="noteListDescription">Today I saw a cat on a hat.</div>
-              <div class="noteListTime">24 November 2022</div>
-            </div>
+        <!-- Main navigational menu -->
+        <nav class="navbar" id="navbar">
+          <a href="#" class="navlinks"><img src="./images/quireIcon.png" alt="quire icon" class="quire-icon"></a>
+          <a href="#" class="navlinks"><img src="./images/search-icon.png" alt="search icon" class="search-icon"></a>
+          <a href="#" class="navlinks"><img src="./images/favorite-icon.png" alt="favorite icon" class="favorite-icon"></a>
+          <a href="#" class="navlinks"><img src="./images/settings-icon.png" alt="settings icon" class="settings-icon"></a>
+        </nav>
+
+        <!-- Menu for saved notes -->
+        <div class="noteList">
+          <div class="noteListItem">
+            <div class="noteListTitle">My first note</div>
+            <div class="noteListDescription">Today I saw a cat on a hat.</div>
+            <div class="noteListTime">24 November 2022</div>
           </div>
-    <div class="note-area">
-        <header class="header">
-            <input
-            type="text"
-            class="txtHeader"
-            id="txtHeader"
-            value=""
-            placeholder="Enter title here"/>
-        </header>
-        <div class="content">
-          <div class="toolbar">
-            <button id="placeholder-button">SPARA</button>
-            <button class="btn" data-element="bold">
-              <i class="fa fa-bold"></i>
-            </button>
-            <button class="btn" data-element="italic">
-              <i class="fa fa-italic"></i>
-            </button>
-            <button class="btn" data-element="underline">
-              <i class="fa fa-underline"></i>
-            </button>
-            <button class="btn" data-element="insertUnorderedList">
-              <i class="fa fa-list-ul"></i>
-            </button>
-            <button class="btn" data-element="insertOrderedList">
-              <i class="fa fa-list-ol"></i>
-            </button>
-          </div>
-          
-          <!-- <button class="boldText">B</button> -->
-          <div class="txtContent" id="txtContent" contenteditable="false"></div>
         </div>
-      </div>
+
+        <!--Note area with header and space for editing notes-->
+        <div class="note-area">
+          <header class="header">
+            <input type="text" class="txtHeader" id="txtHeader" value="" placeholder="Enter title here" onchange="saveTitle()">
+          </header>
+          <div class="content">
+            <!--Toolbar for editing your notes-->
+            <div class="toolbar">
+              <button id="placeholder-button">Ny anteckning</button>
+              <button class="btn" data-element="bold">
+                <i class="fa fa-bold"></i>
+              </button>
+              <button class="btn" data-element="italic">
+                <i class="fa fa-italic"></i>
+              </button>
+              <button class="btn" data-element="underline">
+                <i class="fa fa-underline"></i>
+              </button>
+              <button class="btn" data-element="insertUnorderedList">
+                <i class="fa fa-list-ul"></i>
+              </button>
+              <button class="btn" data-element="insertOrderedList">
+                <i class="fa fa-list-ol"></i>
+              </button>
+            </div>
+            <!--Note editing area-->
+            <div class="txtContent" id="txtContent" contenteditable="false" onchange="saveMessage()"></div>
+          </div>
+        </div>
       </main>
-  </div>
-</div>
+    </div>
 
-<div class="edit-icon" id="edit-icon">
-  <img src="./images/icons8-edit.svg" alt="Editing button">
-</div>
+    <!--Icon button to start editing a note-->
+    <div class="edit-icon" id="edit-icon">
+      <img src="./images/icons8-edit.svg" alt="Editing button">
+    </div>
 
-<footer>
-  <p>Team Koala!</p>
-</footer>
+    <footer>
+      <p>Team Koala!</p>
+    </footer>
+
     <script src="./js/index.js"></script>
+    <!--A script used for the icons in the note editing toolbar-->
     <script src="https://use.fontawesome.com/a31a3f8384.js"></script>
   </body>
 </html>
