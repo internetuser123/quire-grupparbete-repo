@@ -93,6 +93,7 @@ newNoteBtn.addEventListener("click", () => {
     noteList.appendChild(savedNote); 
 
     //TODO: Save to local storage
+    //TODO: Load saved notes on refresh from local storage
     //TODO: Empty txtTitle and txtContent to use for new note
 
 });
