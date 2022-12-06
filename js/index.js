@@ -1,15 +1,7 @@
-
-//Denna variabel används aldrig
-//let noteArea = document.getElementById("txtContent");
-let editButton = document.getElementById("edit-icon");
-//Denna variabel används aldrig
-//let navlinks = document.querySelectorAll(".navlinks");
-
-editButton.addEventListener('click', edit);
-function edit() {
-    document.getElementById("txtContent").setAttribute("contenteditable", "true");
-}
-
+const editButton = document.getElementById("edit-icon");
+// document.getElementById('txtHeader').value = localStorage.getItem('txtHeader');
+let header = document.getElementById("txtHeader"); 
+let noteEditorArea = document.getElementById("txtContent"); 
 
 const modal = document.querySelector(".modal"); 
 let pageVisited = localStorage.getItem("modalShown"); 
@@ -28,6 +20,11 @@ else {
     }
 }
 
+editButton.addEventListener('click', edit);
+function edit() {
+    document.getElementById("txtContent").setAttribute("contenteditable", "true");
+}
+
 // Funktioner för att spara titel/text
 
 function saveTitle() {
@@ -43,7 +40,8 @@ function saveTitle() {
         console.log('Title saved.');
     }
 }
-document.getElementById('txtHeader').value = localStorage.getItem('txtHeader')
+
+
 
 //Save note message
 function saveMessage() {
@@ -53,50 +51,63 @@ function saveMessage() {
     //Save the value in local storage.
     localStorage.setItem('txtContent', messageInput);
     document.getElementById('txtContent').innerHTML = localStorage.getItem('txtContent');
+    saveTitle(); 
     }
-    //Test
-    console.log("saveMessage ran"); 
 }
-//Get the value of the message from local storage
-document.getElementById('txtContent').innerHTML = localStorage.getItem('txtContent')
 
 //Spara anteckning
 const saveBtn = document.getElementById("placeholder-button"); 
 saveBtn.addEventListener("click", saveMessage);
 
 const newNoteBtn = document.getElementById("new-note-btn");
-newNoteBtn.addEventListener("click", () => {
-    //Skapa ny anteckning och spara den gamla till menyn på sidan 
-    //Give each note a unique identifier - the title? 
+newNoteBtn.addEventListener("click", createNewNote);
 
+//Skapa ny anteckning och spara den gamla till menyn på sidan + localstorage
+function createNewNote () {
+    
     //Make sure that the user saved their note first 
     saveMessage(); 
+    saveTitle(); 
+
+    //Skapa anteckningen som ett objekt
     const noteTitle = localStorage.getItem("txtHeader");
     const noteContent = localStorage.getItem("txtContent");  
     const noteList = document.querySelector(".noteList"); 
-   
-    const savedNote = document.createElement("div"); 
-    savedNote.classList.add("noteListItem"); 
 
-    const savedNoteTitle = document.createElement("div"); 
-    savedNoteTitle.classList.add("noteListTitle"); 
-    savedNoteTitle.innerHTML = noteTitle; 
+    const note = {
+        id: Math.floor(Math.random() * 10000),
+        type: "note",
+        title: noteTitle,
+        content: noteContent
+    };
 
-    const savedNoteContent = document.createElement("div"); 
-    savedNoteContent.classList.add("noteListDescription"); 
-    savedNoteContent.innerHTML = noteContent; 
+    //TODO: Save the note object in an array instead
 
-    savedNote.appendChild(savedNoteTitle); 
-    savedNote.appendChild(savedNoteContent); 
-    //Later on could add saving the date here
+    localStorage.setItem(note.id, JSON.stringify(note)); 
+    localStorage.setItem("txtHeader", "");
+    localStorage.setItem("txtContent", "");
+    header.value = ""; 
+    noteEditorArea.innerHTML = ""; 
 
-    noteList.appendChild(savedNote); 
+    //Add note to list 
+    const noteListItem = document.createElement("li"); 
+    noteListItem.classList.add("noteListItem"); 
+    noteListItem.innerText = note.title; 
+    noteList.appendChild(noteListItem); 
 
-    //TODO: Save to local storage
-    //TODO: Load saved notes on refresh from local storage
-    //TODO: Empty txtTitle and txtContent to use for new note
+    //Create eventlistener to be able to navigate old notes
+    noteListItem.addEventListener("click", () => {
+        showClickedNote(note); 
+    });
+}
 
-});
+function showClickedNote(noteObject) {
+    header.value = noteObject.title; 
+    noteEditorArea.innerText = noteObject.content;    
+}
+
+//TODO: Load saved notes on refresh from local storage
+//TODO: Navigate between saved notes
 
 const buttons = document.querySelectorAll(".btn"); 
 buttons.forEach(button => {

@@ -115,6 +115,7 @@ a:hover {
   padding: 10px 0 10px 10px;
   width: 300px;
   cursor: pointer;
+  list-style: none; 
 }
 
 .noteListItem {
