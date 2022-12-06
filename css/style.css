@@ -112,7 +112,7 @@ a:hover {
 
 .noteList {
   background-color: var(--3);
-  padding: 10px 0 10px 10px;
+  padding: 10px 10px 10px 10px;
   width: 300px;
   cursor: pointer;
 }
@@ -318,11 +318,11 @@ footer p {
 #note-list{
    display: flex;
   width: auto;
-  align-items: center; 
+  align-items: center;
   display: grid; 
-  grid-template-columns: repeat(3fr, );
+  grid-template-columns: repeat(3fr, 0);
   grid-gap: 0px;
-  grid-template-rows: repeat(3, 2fr); 
+  grid-template-rows: repeat(3, 2fr);  
 }
 
 
@@ -332,8 +332,9 @@ footer p {
 }
 
 .edit-icon {
-  position: relative;
-  top: -10rem; 
+  position: fixed;
+  top: 32rem;
+  right: 0; 
   margin: 10px; 
   float: right; 
   background-color: var(--1);
