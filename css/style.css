@@ -15,6 +15,7 @@ body {
   /* height: 100%; */
 }
 
+/* MODAL */
 .modal {
   background-color: var(--4); 
   width: 450px;
@@ -47,6 +48,8 @@ body {
   line-height: 25px;
 }
 
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -64,6 +67,8 @@ body {
   width: 100%;
 }
 
+
+/* NAVBAR */
 .quire-icon {
   width: 30px;
   height:30px;
@@ -110,10 +115,12 @@ a:hover {
   width: 100%;
 }
 
-.noteList {
+
+/* LIST OF NOTES */ 
+.note-list {
   background-color: var(--3);
   padding: 10px;
-  width: 300px;
+  width: 250px;
   cursor: pointer;
 }
 
@@ -136,17 +143,33 @@ a:hover {
   font-style: italic;
 }
 
+.note-list > li {
+  list-style: none;
+}
+
+.note-list > li:hover {
+    background-color: var(--4);
+    width: 100%;
+}
+
+.note-list > li:active {
+  background-color: white;
+  width: 100%;
+}
+
+
+/* TOOLBAR */
 .toolbar {
   width: 100%; 
   height: 65px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .toolbar>button {
   padding: 0.8rem; 
-  margin: 0.5rem; 
+  margin: 1rem; 
   background-color: var(--4);
   cursor: pointer;
   border: none; 
@@ -158,15 +181,16 @@ a:hover {
   color: white; 
 }
 
+/* TITLE */
 .header {
-  display: block;
+  
   background-color: var(--2);
   height: 10vh;
   width: 100%;
   padding: 15px 10px;
 }
 .txtHeader {
-  display: block;
+  
   background-color: transparent;
   font-size: 30px;
   text-align: center;
@@ -181,6 +205,7 @@ a:hover {
   background-color: var(--3);
 }
 
+/* TEXT-AREA */
 .txtContent {
   height: 80vh;
   width: 100%;
@@ -190,6 +215,7 @@ a:hover {
   padding: 10px;
 }
 
+/* EDIT-ICON */
 .edit-icon {
   position: relative;
   top: -10rem; 
@@ -215,6 +241,8 @@ a:hover {
   object-fit: cover;
 }
 
+
+/* FOOTER */
 footer {
   display: flex;
   justify-content: center;
@@ -228,12 +256,12 @@ footer p {
   color: white; 
 }
 
-/* .active {
-  font-weight: bold;
-}
- */
-
 .add-note {
   height: 2rem;
   width: 2rem;
+}
+
+/* JS-element */
+.note {
+  margin: 0.5rem;
 }

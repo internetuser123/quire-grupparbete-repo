@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Quire</title>
-    <link rel="icon" type="image/png" href="./images/quireIcon.png" />
+    <link rel="icon" type="image/png" href="./images/quireIcon.png">
   </head>
   <body>
     <div class="container">
@@ -16,7 +16,7 @@
         <p>
             In order to write someting you need to press the pen icon that is
             located to the right bottom corner and when you finish do not forget
-            to click save!! At the left side of the website we have navigation bar
+            to click save!! At the left side of the website we have navigation ba
             you can find everything from saved notepads to favorited notepads. Even
             search your notes for quicker access.
         </p>
@@ -28,26 +28,17 @@
               <a href="#" class="navlinks"><img src="./images/favorite-icon.png" alt="favorite icon" class="favorite-icon"></a>
               <a href="#" class="navlinks"><img src="./images/settings-icon.png" alt="settings icon" class="settings-icon"></a>
           </nav>
-          <div class="noteList">
-            <div class="noteListItem">
-              <div class="noteListTitle">My first note</div>
-              <div class="noteListDescription">Today I saw a cat on a hat.</div>
-              <div class="noteListTime">24 November 2022</div>
-            </div>
+          <section id="note-list" class="note-list">
             <button class="add-note" type="button">+</button>
-          </div>
+            <ul class="note-ul"></ul>
+          </section>
     <div class="note-area">
         <header class="header">
-            <input
-            type="text"
-            class="txtHeader"
-            id="txtHeader"
-            value=""
-            placeholder="Enter title here"/>
+            <input type="text" class="txtHeader" id="txtHeader" value="" placeholder="Enter title here">
         </header>
         <div class="content">
           <div class="toolbar">
-            <button id="placeholder-button">SPARA</button>
+            <button id="save-button">SPARA</button>
             <button class="btn" data-element="bold">
               <i class="fa fa-bold"></i>
             </button>
@@ -64,14 +55,13 @@
               <i class="fa fa-list-ol"></i>
             </button>
           </div>
-          
-          <!-- <button class="boldText">B</button> -->
+        
           <div class="txtContent" id="txtContent" contenteditable="false"></div>
         </div>
       </div>
       </main>
   </div>
-</div>
+
 
 <div class="edit-icon" id="edit-icon">
   <img src="./images/icons8-edit.svg" alt="Editing button">
