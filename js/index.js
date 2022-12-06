@@ -113,7 +113,7 @@ buttons.forEach(button => {
 
 
 
-getNotes().forEach((note) => {
+/* getNotes().forEach((note) => {
     const noteElement = createNoteElement(note.id, note.content);
     notesContainer.insertBefore(noteElement, addNoteButton);
   });
@@ -140,7 +140,7 @@ getNotes().forEach((note) => {
 
     return element;
 
-};
+}; */
 
 function addNote() {
     const notes = getNotes();
@@ -152,3 +152,15 @@ function addNote() {
     console.log("addnote ran")
 };
 
+const toggleButton = document.getElementById("toggle-button");
+
+function noteListToggle() {
+let x = document.getElementById("note-list")
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+console.log("toggle ran");
+  toggleButton.addEventListener('click', noteListToggle);
