@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Quire</title>
-    <link rel="icon" type="image/png" href="./images/quireIcon.png">
+    <link rel="icon" type="image/png" href="./images/quireIcon.png" />
   </head>
   <body>
     <div class="container">
       <!--Modal popup that only appears the first time user visits the page-->
-      <div class="modal"> 
+      <div class="modal">
         <button id="close-btn">&times;</button>
         <h2>Welcome to Notepad</h2>
         <p>
-            In order to write someting you need to press the pen icon that is
-            located to the right bottom corner and when you finish do not forget
-            to click save!! At the left side of the website we have navigation bar
-            you can find everything from saved notepads to favorited notepads. Even
-            search your notes for quicker access.
+          In order to write someting you need to press the pen icon that is
+          located to the right bottom corner and when you finish do not forget
+          to click save!! At the left side of the website we have navigation bar
+          you can find everything from saved notepads to favorited notepads.
+          Even search your notes for quicker access.
         </p>
       </div>
 
       <main class="main-content">
         <!-- Main navigational menu -->
         <nav class="navbar" id="navbar">
-          <a href="#" class="navlinks"><img src="./images/quireIcon.png" alt="quire icon" class="quire-icon"></a>
-          <a href="#" class="navlinks" id="folder-icon"><img src="./images/folder-icon.png" alt="folder icon" class="folder-icon"></a>
-          <a href="#" class="navlinks"><img src="./images/search-icon.png" alt="search icon" class="search-icon"></a>
-          <a href="#" class="navlinks"><img src="./images/favorite-icon.png" alt="favorite icon" class="favorite-icon"></a>
-          <a href="#" class="navlinks"><img src="./images/settings-icon.png" alt="settings icon" class="settings-icon"></a>
-      </nav>
+          <a href="#" class="navlinks"
+            ><img
+              src="./images/quireIcon.png"
+              alt="quire icon"
+              class="quire-icon"
+          /></a>
+          <a href="#" class="navlinks" id="folder-icon"
+            ><img
+              src="./images/folder-icon.png"
+              alt="folder icon"
+              class="folder-icon"
+          /></a>
+          <a href="#" class="navlinks"
+            ><img
+              src="./images/search-icon.png"
+              alt="search icon"
+              class="search-icon"
+          /></a>
+          <a href="#" class="navlinks"
+            ><img
+              src="./images/favorite-icon.png"
+              alt="favorite icon"
+              class="favorite-icon"
+          /></a>
+          <a href="#" class="navlinks"
+            ><img
+              src="./images/settings-icon.png"
+              alt="settings icon"
+              class="settings-icon"
+          /></a>
+        </nav>
 
         <!-- Menu for saved notes -->
         <div class="noteList" id="note-list">
@@ -45,7 +70,14 @@
         <!--Note area with header and space for editing notes-->
         <div class="note-area">
           <header class="header">
-            <input type="text" class="txtHeader" id="txtHeader" value="" placeholder="Enter title here" onchange="saveTitle()">
+            <input
+              type="text"
+              class="txtHeader"
+              id="txtHeader"
+              value=""
+              placeholder="Enter title here"
+              onchange="saveTitle()"
+            />
           </header>
           <div class="content">
             <!--Toolbar for editing your notes-->
@@ -64,26 +96,31 @@
               <button class="btn" data-element="insertUnorderedList">
                 <i class="fa fa-list-ul"></i>
               </button>
-              <button class="btn"  data-element="insertOrderedList">
+              <button class="btn" data-element="insertOrderedList">
                 <i class="fa fa-list-ol"></i>
               </button>
             </div>
             <!--Note editing area-->
-            <div class="txtContent" id="txtContent" contenteditable="false"></div>
+            <div
+              class="txtContent"
+              id="txtContent"
+              contenteditable="false"
+            ></div>
           </div>
         </div>
       </main>
     </div>
-
+    <footer>
+      <img src="./images/team-koala.png" alt="Team Koala" />
+    </footer>
     <!--Icon button to start editing a note-->
     <div class="edit-icon" id="edit-icon">
-      <img src="./images/edit-icon.png" alt="Editing button">
+      <img src="./images/edit-icon.png" alt="Editing button" />
     </div>
 
-    <footer>
-      <img src="./images/team-koala.png" alt="Team Koala">
-
-    </footer>
+    <!-- <footer>
+      <img src="./images/team-koala.png" alt="Team Koala" />
+    </footer> -->
 
     <script src="./js/index.js"></script>
     <!--A script used for the icons in the note editing toolbar-->
