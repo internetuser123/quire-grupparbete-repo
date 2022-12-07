@@ -126,7 +126,7 @@ a:hover {
 .noteList {
   background-color: var(--3);
   padding: 10px 10px 10px 10px;
-  width: 300px;
+  width: 20%;
   cursor: pointer;
 }
 
@@ -266,12 +266,17 @@ footer p {
 
   .navbar {
   width: 100%;
-  height: 10%;
+  height: 48%;
   background-color: var(--4);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.navbar img {
+  width: 48%;
+  height: 48%;
 }
 
 .navlinks {
@@ -335,13 +340,15 @@ footer p {
 
 .txtContent {
  width: auto; 
+ height: 80vh;
+
 
 }
 
 .edit-icon {
   position: fixed;
   top: 32rem;
-  right: 0; 
+  right: 15px; 
   margin: 10px; 
   float: right; 
   background-color: var(--1);
@@ -369,9 +376,14 @@ footer {
   position: fixed;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: fit-content;
   width: 100%; 
   background-color: var(--1);
+}
+
+footer img {
+  width: 40%;
+  height: 70%;
 }
 
 .txtContent {

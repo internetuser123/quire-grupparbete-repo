@@ -152,7 +152,7 @@ function addNote() {
     console.log("addnote ran")
 };
 
-const toggleButton = document.getElementById("toggle-button");
+const toggleButton = document.getElementById("folder-icon");
 
 function noteListToggle() {
 let x = document.getElementById("note-list")
