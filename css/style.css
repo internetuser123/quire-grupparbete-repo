@@ -236,10 +236,6 @@ footer p {
   color: white; 
 }
 
-/* .active {
-  font-weight: bold;
-}
- */
 
 .add-note {
   height: 2rem;
@@ -277,15 +273,14 @@ footer p {
   width: 100%; 
   height: 3rem;
   display: flex;
-  /* flex-wrap: nwrap; */
   justify-content: space-evenly;
   align-items: center;
 }
 
 #new-note-btn {
-  /* font-size: 0.7rem; */
   padding: 0.3rem;
-  /* margin: 1rem; */
+
+
 }
 
 .header {
@@ -293,7 +288,7 @@ footer p {
   background-color: var(--2);
   height: 6vh;
   width: auto;
-  /* padding: 15px 10px; */
+ 
 
 }
 .txtHeader {
@@ -302,7 +297,6 @@ footer p {
   font-size: 30px;
   text-align: center;
   height: 6vh;
-  width: auto;
   border: none;
   outline: none;
 }
@@ -371,3 +365,4 @@ footer {
   padding-left: 1.5rem;
 }
 }
+
