@@ -44,15 +44,33 @@
             class="txtHeader"
             id="txtHeader"
             value=""
-            onchange="saveTitle()"
             placeholder="Enter title here"/>
         </header>
         <div class="fontNav">
           font styles here
            </div>
         <div class="content">
-
-          <textarea class="txtContent" id="txtContent" readonly="readonly" contenteditable='true' onchange="saveMessage()"></textarea>
+          <div class="toolbar">
+            <button id="placeholder-button">SPARA</button>
+            <button class="btn" data-element="bold">
+              <i class="fa fa-bold"></i>
+            </button>
+            <button class="btn" data-element="italic">
+              <i class="fa fa-italic"></i>
+            </button>
+            <button class="btn" data-element="underline">
+              <i class="fa fa-underline"></i>
+            </button>
+            <button class="btn" data-element="insertUnorderedList">
+              <i class="fa fa-list-ul"></i>
+            </button>
+            <button class="btn" data-element="insertOrderedList">
+              <i class="fa fa-list-ol"></i>
+            </button>
+          </div>
+          
+          <!-- <button class="boldText">B</button> -->
+          <div class="txtContent" id="txtContent" contenteditable="false"></div>
         </div>
       </div>
       </main>
@@ -67,5 +85,6 @@
   <p href="#"><img src="./images/team-koala.png" alt="team-koala" class="team-koala-icon"></a></p>
 </footer>
     <script src="./js/index.js"></script>
+    <script src="https://use.fontawesome.com/a31a3f8384.js"></script>
   </body>
 </html>
