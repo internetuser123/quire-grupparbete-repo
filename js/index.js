@@ -2,9 +2,12 @@ const editButton = document.getElementById("edit-icon");
 // document.getElementById('txtHeader').value = localStorage.getItem('txtHeader');
 let header = document.getElementById("txtHeader"); 
 let noteEditorArea = document.getElementById("txtContent"); 
+const noteList = document.querySelector(".noteList"); 
 
 const modal = document.querySelector(".modal"); 
 let pageVisited = localStorage.getItem("modalShown"); 
+let previousNotes = JSON.parse(localStorage.getItem("savedNotesArray")); 
+
 
 if (pageVisited) {
     modal.remove(); 
@@ -18,6 +21,21 @@ else {
         pageVisited = localStorage.getItem("modalShown"); 
         modal.remove(); 
     }
+}
+
+if (previousNotes) {
+    window.onload = function() {
+        //Foreach note, add it to notelist 
+        previousNotes.forEach(note => {
+            const noteListItem = document.createElement("li"); 
+            noteListItem.classList.add("noteListItem"); 
+            noteListItem.innerText = note.title; 
+            noteList.appendChild(noteListItem); 
+            noteListItem.addEventListener("click", () => {
+                showClickedNote(note); 
+            });
+        });
+    };
 }
 
 editButton.addEventListener('click', edit);
@@ -67,12 +85,11 @@ function createNewNote () {
     
     //Make sure that the user saved their note first 
     saveMessage(); 
-    saveTitle(); 
 
     //Skapa anteckningen som ett objekt
     const noteTitle = localStorage.getItem("txtHeader");
     const noteContent = localStorage.getItem("txtContent");  
-    const noteList = document.querySelector(".noteList"); 
+    
 
     const note = {
         id: Math.floor(Math.random() * 10000),
@@ -81,9 +98,15 @@ function createNewNote () {
         content: noteContent
     };
 
-    //TODO: Save the note object in an array instead
-
-    localStorage.setItem(note.id, JSON.stringify(note)); 
+    
+    if (previousNotes) {
+        previousNotes.push(note); 
+    }
+    else {
+        previousNotes = [note]; 
+    }
+    //TODO: Save the note object in an array 
+    localStorage.setItem("savedNotesArray", JSON.stringify(previousNotes)); 
     localStorage.setItem("txtHeader", "");
     localStorage.setItem("txtContent", "");
     header.value = ""; 
@@ -107,7 +130,7 @@ function showClickedNote(noteObject) {
 }
 
 //TODO: Load saved notes on refresh from local storage
-//TODO: Navigate between saved notes
+
 
 const buttons = document.querySelectorAll(".btn"); 
 buttons.forEach(button => {
