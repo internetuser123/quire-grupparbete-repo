@@ -52,7 +52,6 @@ function saveTitle() {
       //Save title to local Storage
       localStorage.setItem('txtHeader', input);
       document.getElementById('txtHeader').value = localStorage.getItem('txtHeader');
-       console.log(input)
         }
     }
 
@@ -67,7 +66,6 @@ function saveTitle() {
         localStorage.setItem('txtContent', messageInput);
         document.getElementById('txtContent').innerHTML = localStorage.getItem('txtContent')
         }
-        console.log("saveMessage ran")
   }
   
   //Get the value of the message from local storage
@@ -78,7 +76,6 @@ const saveButton = document.getElementById("save-button");
 saveButton.addEventListener("click", () => {    
     saveMessage();
     saveTitle();  
-    addToNoteList();
 });
 
 
@@ -93,15 +90,12 @@ function addToNoteList() {
     id: Math.floor(Math.random() * 100000)
   }
   addNote(currentNote);
-  console.log(currentNote.id);
 }
 
+noteUL.addEventListener("click", function() {
+  console.log("something")
+})
 
-/* function getActiveNote()  {
-  let activeNote = document.getElementById(currentNote.id);
-  //TODO: Change styling to display which note is active 
-}
-activeNote.addEventListener("click", getActiveNote); */
 
 
 
@@ -114,7 +108,7 @@ getNotes().forEach((note) => {
   /* noteList.insertBefore(noteElement, addNoteButton); */
 });
 
-/* addNoteButton.addEventListener("click", () => addNote()); */
+addNoteButton.addEventListener("click", () => addToNoteList());
 
 function getNotes() {
   return JSON.parse(localStorage.getItem("notes") || "[]");
@@ -144,7 +138,6 @@ function createNoteElement(id, content) {
   return element;
 
 }
-
 
 
 function addNote(noteObject) {

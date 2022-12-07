@@ -143,16 +143,12 @@ a:hover {
   font-style: italic;
 }
 
-.note-list > li {
-  list-style: none;
-}
-
-.note-list > li:hover {
+.note-ul > li:hover {
     background-color: var(--4);
     width: 100%;
 }
 
-.note-list > li:active {
+.note-ul > li:active {
   background-color: white;
   width: 100%;
 }
@@ -257,11 +253,15 @@ footer p {
 }
 
 .add-note {
-  height: 2rem;
-  width: 2rem;
+  height: 3rem;
+  width: 5rem;
 }
 
 /* JS-element */
 .note {
   margin: 0.5rem;
+}
+
+.note-ul > li {
+  list-style: none;
 }
