@@ -163,7 +163,7 @@ a:hover {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-top: 2px solid var(--1);
+  background: var(--1);
 }
 
 .toolbar > button {
