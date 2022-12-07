@@ -1,6 +1,6 @@
 * {
-  padding: 0; 
-  margin: 0; 
+  padding: 0;
+  margin: 0;
 }
 
 :root {
@@ -11,12 +11,12 @@
 }
 
 body {
-  background-color: var(--1);
+  background-color: var(--2);
   /* height: 100%; */
 }
 
 .modal {
-  background-color: var(--4); 
+  background-color: var(--4);
   width: 450px;
   padding: 30px 40px;
   position: absolute;
@@ -29,7 +29,7 @@ body {
   text-align: center;
 }
 
-.modal>button {
+.modal > button {
   display: block;
   margin: 0 0 20px auto;
   background-color: transparent;
@@ -40,7 +40,7 @@ body {
   cursor: pointer;
 }
 
-.modal>p {
+.modal > p {
   font-size: 14px;
   text-align: justify;
   margin: 20px 0;
@@ -58,6 +58,12 @@ body {
   display: flex;
 }
 
+.fontNav {
+  padding: 10px 5px 10px;
+  flex-direction: row;
+  background-color: var(--4);
+}
+
 .note-area {
   display: flex;
   flex-direction: column;
@@ -65,32 +71,38 @@ body {
 }
 
 .quire-icon {
-  width: 30px;
-  height:30px;
+  width: 50px;
+  height: 50px;
   margin: 1.5rem;
   border-bottom: 1px;
 }
 
 a:hover {
-  background-color: rgb(87, 43, 87);
+  background-color: var(--3);
   width: 100%;
 }
 
+.folder-icon {
+  width: 50px;
+  height: 40px;
+  margin: 1.5rem;
+}
+
 .search-icon {
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   margin: 1.5rem;
 }
 
 .favorite-icon {
-  width: 23px;
-  height: 23px;
+  width: 50px;
+  height: 50px;
   margin: 1.5rem;
 }
 
 .settings-icon {
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   margin: 1.5rem;
 }
 
@@ -101,6 +113,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 2px solid var(--1);
 }
 
 .navlinks {
@@ -192,12 +205,12 @@ a:hover {
 
 .edit-icon {
   position: relative;
-  top: -10rem; 
-  margin: 20px; 
-  float: right; 
+  top: -10rem;
+  margin: 20px;
+  float: right;
   background-color: var(--1);
   border-radius: 50%;
-  width: 6rem; 
+  width: 6rem;
   height: 6rem;
   display: flex;
   justify-content: center;
@@ -218,18 +231,13 @@ a:hover {
 footer {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 10vh;
-  width: 100%; 
-  background-color: var(--1);
+  height: 5vh;
 }
 
 footer p {
-  color: white; 
+  color: white;
 }
 
-/* .active {
-  font-weight: bold;
+footer a {
+  color: var(--4);
 }
- */
-
