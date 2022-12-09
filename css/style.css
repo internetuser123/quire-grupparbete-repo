@@ -127,6 +127,7 @@ a:hover {
   padding: 10px 10px 10px 10px;
   width: 20%;
   cursor: pointer;
+  list-style: none; 
   height: 93.7vh;
   overflow-y: scroll;
 }
