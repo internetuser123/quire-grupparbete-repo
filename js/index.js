@@ -53,9 +53,6 @@ function saveTitle() {
         //Save title to local Storage
         localStorage.setItem('txtHeader', input);
         document.getElementById('txtHeader').value = localStorage.getItem('txtHeader');
-        console.log(input)
-        //Test
-        console.log('Title saved.');
     }
 }
 
@@ -75,13 +72,18 @@ function saveMessage() {
 
 //Spara anteckning
 const saveBtn = document.getElementById("placeholder-button"); 
-saveBtn.addEventListener("click", saveMessage);
+saveBtn.addEventListener("click", () => {
+    saveMessage(); 
+    createNewNote(false); 
+});
 
 const newNoteBtn = document.getElementById("new-note-btn");
-newNoteBtn.addEventListener("click", createNewNote);
+newNoteBtn.addEventListener("click", () => {
+    createNewNote(true); 
+});
 
 //Skapa ny anteckning och spara den gamla till menyn på sidan + localstorage
-function createNewNote () {
+function createNewNote (clearWorkSpace) {
     
     //Make sure that the user saved their note first 
     saveMessage(); 
@@ -97,7 +99,7 @@ function createNewNote () {
         title: noteTitle,
         content: noteContent
     };
-
+    
     
     if (previousNotes) {
         previousNotes.push(note); 
@@ -105,31 +107,46 @@ function createNewNote () {
     else {
         previousNotes = [note]; 
     }
-    //TODO: Save the note object in an array 
+    //Save the note object in an array 
     localStorage.setItem("savedNotesArray", JSON.stringify(previousNotes)); 
-    localStorage.setItem("txtHeader", "");
-    localStorage.setItem("txtContent", "");
-    header.value = ""; 
-    noteEditorArea.innerHTML = ""; 
-
+    
+    if (clearWorkSpace) {
+        localStorage.setItem("txtHeader", "");
+        localStorage.setItem("txtContent", "");
+        header.value = ""; 
+        noteEditorArea.innerHTML = ""; 
+    }
+    
     //Add note to list 
     const noteListItem = document.createElement("li"); 
     noteListItem.classList.add("noteListItem"); 
+    noteListItem.setAttribute("id", note.id); 
     noteListItem.innerText = note.title; 
     noteList.appendChild(noteListItem); 
 
     //Create eventlistener to be able to navigate old notes
     noteListItem.addEventListener("click", () => {
-        showClickedNote(note); 
+        showClickedNote(note, noteListItem); 
     });
 }
 
-function showClickedNote(noteObject) {
-    header.value = noteObject.title; 
-    noteEditorArea.innerText = noteObject.content;    
+function showClickedNote(noteObject, noteLi) {
+    header.value = noteObject.title;
+    noteEditorArea.innerText = noteObject.content;
+    highlightActiveNote(noteLi); 
 }
 
-//TODO: Load saved notes on refresh from local storage
+function highlightActiveNote(activeNote) {
+    if(previousNotes) {
+        previousNotes.forEach(note => {
+            const noteElement = document.getElementById(note.id); 
+            noteElement.style.background = "#9188a6"; 
+        });
+    }
+    activeNote.style.background = "white";     
+}
+
+//Load saved notes on refresh from local storage
 
 
 const buttons = document.querySelectorAll(".btn"); 
