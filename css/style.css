@@ -204,12 +204,13 @@ a:hover {
 }
 
 .txtContent {
-  height: 80vh;
   width: 100%;
   background-color: white;
   border: none;
   outline: none;
   padding: 10px;
+  height: 93.7vh;
+  overflow-y: scroll;
 }
 
 .edit-icon {
